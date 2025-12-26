@@ -1,0 +1,3 @@
+aiogram==3.23.0
+remnawave==2.4.4
+Quart==0.20.0
