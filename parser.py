@@ -4,7 +4,7 @@ import re
 
 async def get_resources(logs: str, user_id: int):
     pattern = re.compile(
-        r"(?P<date>\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}.\d{6}) from (((tcp)|(udp)):)?(?P<ip>\d+.\d+.\d+.\d+:\d+) accepted ((tcp)|(udp)):(?P<resource>[^:]+):\d+ \[.+\] email: p" + str(
+        r"(?P<date>\d{4}\/\d{2}\/\d{2} \d{2}:\d{2}:\d{2}.\d{6}) from (((tcp)|(udp)):)?(?P<ip>\d+.\d+.\d+.\d+:\d+) accepted ((tcp)|(udp)):(?P<resource>[^:]+):\d+ \[.+\] email: " + str(
             user_id)
     )
 
