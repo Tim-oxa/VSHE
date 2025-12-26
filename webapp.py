@@ -39,7 +39,7 @@ async def index(short_uuid: str):
     except NotFoundError:
         return Response(status=404)
     else:
-        request_url = REMNA_URL + "/api/users/" + remna_user.uuid
+        request_url = f"{REMNA_URL}/api/users/{remna_user.uuid}"
         remna_user_response = await client.get(request_url)
         remna_user_id = remna_user_response.json()["id"]
         sites = await get_resources(logs_content, remna_user_id)
