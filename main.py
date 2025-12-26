@@ -21,7 +21,7 @@ async def on_message(message: Message):
         remna_user = await remna.users.create_user(CreateUserRequestDto(
             username=f"p{message.from_user.id}",
             expire_at=message.date + timedelta(hours=3),
-            traffic_limit_bytes=(1024 * 2) * 512,
+            traffic_limit_bytes=(1024 ** 3) * 1,
             active_internal_squads=[REMNA_SQUAD]
         ))
     kb = InlineKeyboardMarkup(inline_keyboard=[
